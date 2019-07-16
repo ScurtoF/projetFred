@@ -15,7 +15,6 @@ public class MultiRisqueServlet extends HttpServlet {
 
     protected void doGet( HttpServletRequest request, HttpServletResponse response )
             throws ServletException, IOException {
-        System.out.println( "dans la servlet" );
         request.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
     }
 
