@@ -16,9 +16,7 @@
   });
   
   $('.dropdown').click(function(elt){
-	  console.log("entrer");
 	  if($('.dropdown-menu').mouseenter(function(){
-		  console.log("entrer souris");
 		  if($('.dropdown-menu').mouseleave(function(e){
 			  $('.dropdown-menu').removeClass('show');
 		  }));
@@ -58,6 +56,7 @@
 })(jQuery); // End of use strict
 
 function changeEltCenter(e){
+	console.log($(e).attr('href'));
 	$('#elt-center').load($(e).attr('href'));
 	
 }
