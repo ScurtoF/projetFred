@@ -14,7 +14,17 @@
       }
     }
   });
-
+  
+  $('.dropdown').click(function(elt){
+	  console.log("entrer");
+	  if($('.dropdown-menu').mouseenter(function(){
+		  console.log("entrer souris");
+		  if($('.dropdown-menu').mouseleave(function(e){
+			  $('.dropdown-menu').removeClass('show');
+		  }));
+	  }));
+  });
+  
   // Closes responsive menu when a scroll trigger link is clicked
   $('.js-scroll-trigger').click(function() {
     $('.navbar-collapse').collapse('hide');
@@ -31,9 +41,13 @@
     if ($("#mainNav").offset().top > 100) {
       $("#mainNav").addClass("navbar-shrink");
       $('a.js-scroll-trigger[href*="#"]:not([href="#page-top"])').css('color', 'white');
+      $('.dropdown-menu').addClass("back-black");
+      $('.dropdown-item').css('color', 'white');
     } else {
       $("#mainNav").removeClass("navbar-shrink");
       $('a.js-scroll-trigger[href*="#"]:not([href="#page-top"])').css('color', '#545050');
+      $('.dropdown-menu').removeClass("back-black");
+      $('.dropdown-item').css('color','#545050');
     }
   };
   // Collapse now if page is not at top
@@ -42,3 +56,8 @@
   $(window).scroll(navbarCollapse);
 
 })(jQuery); // End of use strict
+
+function changeEltCenter(e){
+	$('#elt-center').load($(e).attr('href'));
+	
+}

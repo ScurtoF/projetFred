@@ -13,13 +13,6 @@ p {
   line-height: 1.75;
 }
 
-a {
-  color: #fed136;
-}
-
-a:hover {
-  color: #fec503;
-}
 
 
 h1,
@@ -163,6 +156,9 @@ img::-moz-selection {
     padding-top: 0;
     padding-bottom: 0;
     background-color: #212529;
+  }
+  .back-black{
+  background-color: #212529 !important;
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
@@ -445,7 +441,6 @@ header.masthead .intro-text .intro-heading {
   color: white;
   border: 7px solid #e9ecef;
   border-radius: 100%;
-  background-color: #fed136;
 }
 
 .timeline > li .timeline-image h4 {
@@ -688,4 +683,21 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }
 .sub-item{
 	font-size:0.8rem !important;
+}
+.text-primary{
+	color:#0a4f98!important;
+}
+.navbar-nav .dropdown-menu{
+	 background-color: transparent;
+}
+.dropdown-item{
+	color: rgb(84,80,80);
+}
+.dropdown-item:hover{
+	background-color: transparent !important;
+	font-style:oblique !important;
+	font-weight: bold !important;
+}
+.bg-light{
+	 background-color: #dfeaef!important;
 }
